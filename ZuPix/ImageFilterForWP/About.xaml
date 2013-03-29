@@ -1,0 +1,85 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="ZuPix.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:ZuPix"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" >
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/ZuPix;component/Backgrounds/banner.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            
+            <TextBlock x:Name="PageTitle" Text="about" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <StackPanel>
+                <TextBlock 
+                    Text="ZuPix" 
+                    Margin="12,0,12,0" 
+                    FontSize="{StaticResource PhoneFontSizeLarge}" 
+                    FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
+                <TextBlock 
+                    Text="Version 1.0" 
+                    Margin="12,0,12,0" 
+                    FontSize="{StaticResource PhoneFontSizeNormal}"/>
+            </StackPanel>
+            
+            <TextBlock 
+                Grid.Row="1" 
+                Text="ZuPix is a super cool picture editor for your windows phone .It has over 39 custom effects to make your pics vibrant and snazzy and best of all it's completely free . "
+                Margin="12,24,12,24" 
+                TextWrapping="Wrap" 
+                Foreground="{StaticResource PhoneSubtleBrush}" 
+                FontSize="{StaticResource PhoneFontSizeNormal}" />
+            <HyperlinkButton 
+                Grid.Row="2" 
+                Content="email : kshark27@hotmail.com" 
+                Margin="0,12,0,0" 
+                HorizontalAlignment="Left" 
+                Foreground="Turquoise" 
+                FontSize="{StaticResource PhoneFontSizeNormal}" 
+                Command="{Binding SendAnEmailCommand}"/>
+            <HyperlinkButton 
+                Grid.Row="3"
+                Content="Developer : kartik Sharma" 
+                Margin="0,12,0,0" 
+                HorizontalAlignment="Left" 
+                Foreground="Turquoise" 
+                FontSize="{StaticResource PhoneFontSizeNormal}" 
+                Command="{Binding RateThisAppCommand}"/>
+            <StackPanel Grid.Row="4" Margin="12,0,12,50" VerticalAlignment="Bottom">
+                <Image 
+                    Source="/ZuPix;component/zupix_logo.png" 
+                    Stretch="None" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+    
+</phone:PhoneApplicationPage>
