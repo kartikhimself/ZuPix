@@ -1,7 +1,7 @@
 # ZuPix
 ![alt tag](http://i.imgur.com/frOSIPl.png) 
 
-Image Editor for windows phone with more tha 45 filters.
+Image Editor for windows phone with more than 45 filters.
 
 
 ![alt tag](http://i.imgur.com/fpsKrVl.png)    ![alt tag](http://i.imgur.com/i16ao7T.png)
