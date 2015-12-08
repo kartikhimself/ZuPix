@@ -60,7 +60,7 @@
                 FontSize="{StaticResource PhoneFontSizeNormal}" />
             <HyperlinkButton 
                 Grid.Row="2" 
-                Content="email : kshark27@hotmail.com" 
+                Content="email : kshark05@gmail.com" 
                 Margin="0,12,0,0" 
                 HorizontalAlignment="Left" 
                 Foreground="Turquoise" 
